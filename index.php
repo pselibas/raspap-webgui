@@ -40,11 +40,11 @@ define('RASPI_TORPROXY_ENABLED', false );
 include_once( RASPI_CONFIG.'/raspap.php' );
 include_once( 'includes/functions.php' );
 include_once( 'includes/dashboard.php' );
-include_once( 'includes/authenticate.php' );
+//include_once( 'includes/authenticate.php' );
 include_once( 'includes/admin.php' );
-include_once( 'includes/dhcp.php' );
-include_once( 'includes/hostapd.php' );
-include_once( 'includes/system.php' );
+//include_once( 'includes/dhcp.php' );
+//include_once( 'includes/hostapd.php' );
+//include_once( 'includes/system.php' );
 include_once( 'includes/configure_client.php' );
 
 $output = $return = 0;
@@ -127,12 +127,6 @@ $csrf_token = $_SESSION['csrf_token'];
               <li>
                 <a href="index.php?page=wpa_conf"><i class="fa fa-signal fa-fw"></i> Configure client</a>
               </li>
-              <li>
-                <a href="index.php?page=hostapd_conf"><i class="fa fa-dot-circle-o fa-fw"></i> Configure hotspot</a>
-              </li>
-              <li>
-                <a href="index.php?page=dhcpd_conf"><i class="fa fa-exchange fa-fw"></i> Configure DHCP</a>
-              </li>
               <?php if ( RASPI_OPENVPN_ENABLED ) : ?>
               <li>
                 <a href="index.php?page=openvpn_conf"><i class="fa fa-lock fa-fw"></i> Configure OpenVPN</a>
@@ -143,12 +137,6 @@ $csrf_token = $_SESSION['csrf_token'];
                  <a href="index.php?page=torproxy_conf"><i class="fa fa-eye-slash fa-fw"></i> Configure TOR proxy</a>
               </li>
               <?php endif; ?>
-              <li>
-                <a href="index.php?page=auth_conf"><i class="fa fa-lock fa-fw"></i> Configure Auth</a>
-              </li>
-              <li>
-                 <a href="index.php?page=system_info"><i class="fa fa-cube fa-fw"></i> System</a>
-              </li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.navbar-default -->
